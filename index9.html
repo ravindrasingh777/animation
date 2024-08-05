@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>loader</title>
+    <style>
+        .parent{
+            height: 600px;
+            width: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color:rgb(1, 1, 44);
+        }
+        .loader{
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            border: 30px solid white;
+            border-top: 30px solid gray;
+            border-bottom: 30px solid gray;
+            animation: loader 2s linear infinite;
+        }
+        @keyframes loader {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="loader"></div>
+    </div>
+</body>
+</html>

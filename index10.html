@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>wave</title>
+    <style>
+        .parent{
+            width: 120px;
+            height: 40px;
+            background-color:#A52A2A;
+            margin:20px auto;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            position: relative;
+
+        }
+        .overlay{
+            width: 120px;
+            height: 40px;
+            background-color:#A52A2A;
+            border-radius: 30px;
+            position: absolute;
+            animation: overlay 2s infinite linear;
+        }
+
+        @keyframes overlay {
+            0%{
+                opacity: 0;
+                transform: scale(1,1);
+            }
+            50%{
+                opacity: 0.5;
+                transform: scale(1.5,1.5);
+            }
+            100%{
+                opacity: 0;
+                transform: scale(1,1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">Enquire Now
+        <div class="overlay"></div>
+    </div>
+</body>
+</html>

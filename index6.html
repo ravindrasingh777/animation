@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>loading...</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .image{
+            position: fixed;
+            z-index: 3;
+            opacity: 0;
+            visibility: hidden;
+            animation: image 1s 3.3s linear forwards;
+        }
+        @keyframes image {
+            from{
+                opacity: 0;
+                visibility: hidden;
+                transform: scale(0);
+            }
+            to{
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1);
+            }
+        }
+        .parent{
+            width: 250px;
+            height: 70px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+            font-size: 27px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            
+        }
+        .overlay{
+            width: 250px;
+            height: 70px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: skyblue; 
+            transform: scaleX(0);
+            transform-origin: left;
+            animation: overlay 2.5s 900ms linear forwards;
+        }
+        @keyframes overlay {
+            from{
+                transform: scaleX(0);
+                transform-origin: left;
+            }
+            to{
+                transform: scaleX(1);
+            }
+        }
+
+       
+        span{
+            transform: translateY(100px);
+            opacity: 0;
+            visibility: hidden;
+            animation: load 2s linear forwards;  
+            animation-delay: var(--time);
+        }
+        @keyframes load {
+            from{
+            transform: translateY(100px);
+            opacity: 0;
+            visibility: hidden;
+            }
+            to{
+            transform: translateY(0px);
+            opacity: 1;
+            visibility: visible;
+            }
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <div class="image">
+        <img src="cartoon-office-celebration-15570488.webp" width="100%" height="100%" alt="">
+    </div>
+    
+    <div class="parent">
+        <div class="overlay"></div>
+        
+            <span style="--time:100ms">L</span>
+            <span style="--time:200ms">O</span>
+            <span style="--time:300ms">A</span>
+            <span style="--time:400ms">D</span>
+            <span style="--time:500ms">I</span>
+            <span style="--time:600ms">N</span>
+            <span style="--time:700ms">G</span>
+            <span style="--time:900ms">.</span>
+            <span style="--time:1000ms">.</span>
+            <span style="--time:1100ms">.</span>
+        
+    </div>
+</body>
+</html>

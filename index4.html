@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>animation</title>
+    <style>
+        .parent{
+            height: 200px;
+            width: 200px;
+            margin: 50px auto;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .box{
+            height: 100px;
+            width: 5px;
+            background-color: aqua;
+        }
+        .box:nth-child(1){
+            animation: first 1s infinite ease-in;
+            background-color: orange;
+
+        }
+        @keyframes first{
+            from{
+                transform: scale(0.5);
+            }
+            to{
+                transform: scale(1);
+            }
+        }
+
+        .box:nth-child(2){
+            animation: second 1s infinite ease;
+            background-color: blue;
+        }
+        @keyframes second{
+            from{
+                transform: scale(0.5);
+            }
+            to{
+                transform: scale(1);
+            }
+        }
+
+        .box:nth-child(3){
+            animation: third 800ms infinite ease;
+            background-color: skyblue;
+        }
+        @keyframes third{
+            from{
+                transform: scale(0.5);
+            }
+            to{
+                transform: scale(1);
+            }
+        }
+        .box:nth-child(4){
+            animation: four 1s infinite ease-out;
+            background-color: yellowgreen;
+        }
+        @keyframes four{
+            from{
+                transform: scale(1);
+            }
+            to{
+                transform: scale(0.5);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+   
+</body>
+</html>
